@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__.'/../../../vendor/autoload.php';
+
 /*
 --- Part Two ---
 
@@ -32,8 +34,6 @@ In this example, the sum of the results would be 4 + 3 + 2 = 9.
 
 What is the sum of each row's result in your puzzle input?
 */
-
-require __DIR__.'/../../../vendor/autoload.php';
 
 /**
  * Determines checksum for the spreadsheet.

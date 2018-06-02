@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__.'/../../../vendor/autoload.php';
+
 /*
 --- Day 2: Corruption Checksum ---
 
@@ -30,8 +32,6 @@ In this example, the spreadsheet's checksum would be 8 + 4 + 6 = 18.
 
 What is the checksum for the spreadsheet in your puzzle input?
 */
-
-require __DIR__.'/../../../vendor/autoload.php';
 
 /**
  * Determines checksum for the spreadsheet.

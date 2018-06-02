@@ -1,5 +1,7 @@
 <?php
 
+require __DIR__.'/../../../vendor/autoload.php';
+
 /*
 --- Part Two ---
 
@@ -24,8 +26,6 @@ For example:
 
 What is the solution to your new captcha?
 */
-
-require __DIR__.'/../../../vendor/autoload.php';
 
 /**
  * Finds the sum of all digits that match the N / 2 steps forward digit in the circular list.
