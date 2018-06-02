@@ -1,0 +1,10 @@
+{
+    "name": "paljinov/advent-of-code",
+    "description": "PHP solutions to \"Advent of Code\" tasks.",
+    "type": "project",
+    "license": "MIT",
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.11",
+        "symfony/var-dumper": "^4.1"
+    }
+}
