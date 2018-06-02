@@ -31,7 +31,7 @@ docker-compose up -d
 ```
 4. Now you can open any task in your favorite browser, e.g.
 ```
-http://localhost/src/Day%201%20-%20Inverse%20Captcha/Part1.php
+http://localhost/src/2017/Day%201%20-%20Inverse%20Captcha/Part1.php
 ```
 5. If you need to enter a running container:
 ```sh
