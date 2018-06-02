@@ -70,7 +70,7 @@ function solution(string $digitsSequence): int
             $nextDigit = $digits[0];
         }
 
-         // If current digit matches the next one step forward
+        // If current digit matches the next one step forward
         if ($currentDigit === $nextDigit) {
             $sum += $currentDigit;
         }
