@@ -1,4 +1,4 @@
-advent-of-code
+php-advent-of-code
 ============
 
 PHP solutions to **Advent of Code**: http://adventofcode.com/ tasks.  
@@ -19,11 +19,11 @@ Contribution
 ============
 Feel free to fork this repository and solve something in better, i.e. more optimal way.
 
-**advent-of-code** is dockerized for everyone who prefers to debug in the browser instead of in the console.
+**php-advent-of-code** is dockerized for everyone who prefers to debug in the browser instead of in the console.
 
 If you have docker installed:
 
-1. Pull advent-of-code project
+1. Pull php-advent-of-code project
 2. Open console and change directory to project root
 3. Run the following command:
 ```sh
@@ -35,11 +35,11 @@ http://localhost/src/2017/Day%201%20-%20Inverse%20Captcha/Part1.php
 ```
 5. If you need to enter a running container:
 ```sh
-docker exec -it advent-of-code_app_1 /bin/bash
+docker exec -it php-advent-of-code_app_1 /bin/bash
 ```
 
 Copyright and License
 ============
 
-Copyright (c) 2015 - 2018 Pave Aljinović  
-Licensed under the [MIT License](https://github.com/paljinov/advent-of-code/blob/master/LICENSE.md)
+Copyright (c) 2018 - 2019 Pave Aljinović  
+Licensed under the [MIT License](https://github.com/paljinov/php-advent-of-code/blob/master/LICENSE.md)

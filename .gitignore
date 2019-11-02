@@ -1,2 +1,7 @@
+# Editor and IDE
+/.idea
+/.vscode
+
+# Managed by Composer
 /vendor
 .php_cs.cache
