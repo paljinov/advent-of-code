@@ -1,12 +1,13 @@
-FROM php:7.3-fpm
+FROM php:7.4-fpm
 
 WORKDIR /var/www
 COPY . /var/www
 
 RUN apt-get update && apt-get install -y \
     curl \
-    zip \
+    git \
     unzip \
+    zip \
     && pecl install xdebug-2.8.0
 
 # Composer
