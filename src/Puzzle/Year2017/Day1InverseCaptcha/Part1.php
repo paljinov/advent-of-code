@@ -1,6 +1,8 @@
 <?php
 
-require __DIR__.'/../../../vendor/autoload.php';
+namespace App\Puzzle\Year2017\Day1InverseCaptcha;
+
+use App\Puzzle\PuzzleInterface;
 
 /*
 --- Day 1: Inverse Captcha ---
@@ -47,38 +49,42 @@ For example:
 What is the solution to your captcha?
 */
 
-/**
- * Finds the sum of all digits that match the next digit in the circular list.
- *
- * @param string $digitsSequence Digits list
- *
- * @return int Sum
- */
-function solution(string $digitsSequence): int
+class Part1 implements PuzzleInterface
 {
-    $sum = 0;
+    /**
+     * Finds the sum of all digits that match the next digit in the circular list.
+     *
+     * @param string $digitsSequence Digits list
+     *
+     * @return int Sum
+     */
+    function solution(... $digitsSequence): int
+    {
+        $digitsSequence = $digitsSequence[0];
+        $sum = 0;
 
-    $digits = array_map('intval', str_split($digitsSequence, 1));
+        $digits = array_map('intval', str_split($digitsSequence, 1));
 
-    for ($i = 0; $i < count($digits); $i++) {
-        $currentDigit = $digits[$i];
+        for ($i = 0; $i < count($digits); $i++) {
+            $currentDigit = $digits[$i];
 
-        // List is circular
-        if ($i + 1 < count($digits)) {
-            $nextDigit = $digits[$i + 1];
-        } else {
-            $nextDigit = $digits[0];
+            // List is circular
+            if ($i + 1 < count($digits)) {
+                $nextDigit = $digits[$i + 1];
+            } else {
+                $nextDigit = $digits[0];
+            }
+
+            // If current digit matches the next one step forward
+            if ($currentDigit === $nextDigit) {
+                $sum += $currentDigit;
+            }
         }
 
-        // If current digit matches the next one step forward
-        if ($currentDigit === $nextDigit) {
-            $sum += $currentDigit;
-        }
+        return $sum;
     }
-
-    return $sum;
 }
 
-$digitsSequence = '91212129';
-$sum = solution($digitsSequence);
-echo $sum;
+// $digitsSequence = '91212129';
+// $sum = solution($digitsSequence);
+// echo $sum;

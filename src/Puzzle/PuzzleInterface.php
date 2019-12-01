@@ -9,7 +9,7 @@ interface PuzzleInterface
      *
      * @param mixed ...$inputs
      * 
-     * @return string
+     * @return mixed
      */
-    public function solution(...$inputs): string;
+    public function solution(...$inputs);
 }

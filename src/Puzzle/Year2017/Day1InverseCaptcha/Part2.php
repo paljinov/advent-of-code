@@ -1,6 +1,8 @@
 <?php
 
-require __DIR__.'/../../../vendor/autoload.php';
+namespace App\Puzzle\Year2017\Day1InverseCaptcha;
+
+use App\Puzzle\PuzzleInterface;
 
 /*
 --- Part Two ---
@@ -27,6 +29,8 @@ For example:
 What is the solution to your new captcha?
 */
 
+class Part2 implements PuzzleInterface
+{
 /**
  * Finds the sum of all digits that match the N / 2 steps forward digit in the circular list.
  *
@@ -58,6 +62,7 @@ function solution(string $digitsSequence): int
     }
 
     return $sum;
+}
 }
 
 $digitsSequence = '12131415';
