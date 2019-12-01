@@ -7,9 +7,9 @@ interface PuzzleInterface
     /**
      * Puzzle entry method.
      *
-     * @param mixed ...$inputs
+     * @param mixed $input
      * 
      * @return mixed
      */
-    public function solution(...$inputs);
+    public function solution($input);
 }
