@@ -2,8 +2,8 @@
 
 namespace App\Command;
 
+use App\Helper\CommandOutputHelper;
 use App\Service\PuzzleLocatorService;
-use InvalidArgumentException;
 use LogicException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -15,6 +15,13 @@ class PuzzleRunnerCommand extends Command
     protected static $defaultName = 'puzzle:run';
 
     /**
+     * Command output helper.
+     * 
+     * @var CommandOutputHelper $commandOutputHelper
+     */
+    private $commandOutputHelper;
+
+    /**
      * Puzzle locator service.
      * 
      * @var PuzzleLocatorService $puzzleLocatorService
@@ -23,6 +30,7 @@ class PuzzleRunnerCommand extends Command
 
     public function __construct()
     {
+        $this->commandOutputHelper = new CommandOutputHelper();
         $this->puzzleLocatorService = new PuzzleLocatorService();
 
         parent::__construct();
@@ -42,41 +50,45 @@ class PuzzleRunnerCommand extends Command
     {
         $year = $input->getArgument('year');
         if (!filter_var($year, FILTER_VALIDATE_INT)) {
-            throw new InvalidArgumentException(sprintf('Puzzle year "%s" is not valid integer.', $year));
+            $this->commandOutputHelper->getErrorOutput(
+                $output,
+                sprintf('Puzzle year "%s" is not valid integer.', $year)
+            );
+            return CommandOutputHelper::ERROR_CODE;
         }
         $year = (int) $year;
 
         $day = $input->getArgument('day');
         if (!filter_var($day, FILTER_VALIDATE_INT)) {
-            throw new InvalidArgumentException(sprintf('Puzzle day "%s" is not valid integer.', $day));
+            $this->commandOutputHelper->getErrorOutput(
+                $output,
+                sprintf('Puzzle day "%s" is not valid integer.', $day)
+            );
+            return CommandOutputHelper::ERROR_CODE;
         }
         $day = (int) $day;
 
         $part = $input->getArgument('part');
         if (!filter_var($part, FILTER_VALIDATE_INT)) {
-            throw new InvalidArgumentException(sprintf('Puzzle part "%s" is not valid integer.', $part));
+            $this->commandOutputHelper->getErrorOutput(
+                $output,
+                sprintf('Puzzle part "%s" is not valid integer.', $part)
+            );
+            return CommandOutputHelper::ERROR_CODE;
         }
         $part = (int) $part;
 
-        $puzzleFilepath = $this->puzzleLocatorService->getPuzzleFilepath($year, $day, $part);
-        if ($puzzleFilepath === null) {
-            throw new LogicException(sprintf(
-                'Puzzle from year "%s", day "%s" and part "%s" does not exist.',
-                $year,
-                $day,
-                $part
-            ));
+        $puzzleInput = $input->getArgument('puzzle_input');
+
+        try {
+            $puzzleClassName = $this->puzzleLocatorService->getPuzzleClassName($year, $day, $part);
+            $puzzleOutput = $this->puzzleLocatorService->runPuzzle($puzzleClassName, $puzzleInput);
+        } catch (LogicException $e) {
+            $this->commandOutputHelper->getErrorOutput($output, $e->getMessage());
+            return CommandOutputHelper::ERROR_CODE;
         }
 
-        $puzzleInput = $input->getArgument('puzzle_input');
-        $puzzleOutput = $this->puzzleLocatorService->runPuzzle($puzzleFilepath, $puzzleInput);
-
-        $output->writeln([
-            '<info>' . sprintf('Output for puzzle year %s, day %s and part %s', $year, $day, $part) . '<info>',
-            '<info>================================================<info>',
-            '<info>' . $puzzleOutput . '<info>',
-        ]);
-
-        return 0;
+        $this->commandOutputHelper->getSuccessOutput($output, $puzzleOutput);
+        return CommandOutputHelper::SUCCESS_CODE;
     }
 }
