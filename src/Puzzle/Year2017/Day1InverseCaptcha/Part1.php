@@ -1,9 +1,5 @@
 <?php
 
-namespace App\Puzzle\Year2017\Day1InverseCaptcha;
-
-use App\Puzzle\PuzzleInterface;
-
 /*
 --- Day 1: Inverse Captcha ---
 
@@ -46,6 +42,10 @@ For example:
 
 What is the solution to your captcha?
 */
+
+namespace App\Puzzle\Year2017\Day1InverseCaptcha;
+
+use App\Puzzle\PuzzleInterface;
 
 class Part1 implements PuzzleInterface
 {

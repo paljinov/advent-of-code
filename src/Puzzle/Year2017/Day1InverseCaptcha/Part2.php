@@ -1,9 +1,5 @@
 <?php
 
-namespace App\Puzzle\Year2017\Day1InverseCaptcha;
-
-use App\Puzzle\PuzzleInterface;
-
 /*
 --- Part Two ---
 
@@ -27,6 +23,10 @@ For example:
 
 What is the solution to your new captcha?
 */
+
+namespace App\Puzzle\Year2017\Day1InverseCaptcha;
+
+use App\Puzzle\PuzzleInterface;
 
 class Part2 implements PuzzleInterface
 {
@@ -63,4 +63,3 @@ class Part2 implements PuzzleInterface
         return $sum;
     }
 }
-
