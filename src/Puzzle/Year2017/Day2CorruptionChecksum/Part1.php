@@ -49,7 +49,7 @@ class Part1 implements PuzzleInterface
         $rowsDiff = [];
 
         // Spreadsheet data is parsed from multiline string and stored to array
-        $spreadsheet = $this->parseMultilineString($spreadsheetMultilineString);
+        $spreadsheet = $this->parseSpreadsheetMultilineString($spreadsheetMultilineString);
 
         foreach ($spreadsheet as $row) {
             // Determine the difference between the largest value and the smallest value
@@ -71,20 +71,20 @@ class Part1 implements PuzzleInterface
      *
      * @param string $spreadsheetMultilineString
      * 
-     * @return array
+     * @return int[]
      */
-    public function parseMultilineString(string $spreadsheetMultilineString): array
+    public function parseSpreadsheetMultilineString(string $spreadsheetMultilineString): array
     {
-        $data = [];
+        $spreadsheet = [];
 
         $spreadsheetMultilineString = str_replace("\t", " ", $spreadsheetMultilineString);
         $rows = preg_split("/(\r\n|\n|\r)/", $spreadsheetMultilineString);
 
         foreach ($rows as $row) {
             $rowData = explode(" ", $row);
-            $data[] = array_map('intval', $rowData);
+            $spreadsheet[] = array_map('intval', $rowData);
         }
 
-        return $data;
+        return $spreadsheet;
     }
 }

@@ -59,7 +59,7 @@ class Part2 implements PuzzleInterface
         $rowsQuotient = [];
 
         // Spreadsheet data is parsed from multiline string and stored to array
-        $spreadsheet = $this->part1->parseMultilineString($spreadsheetMultilineString);
+        $spreadsheet = $this->part1->parseSpreadsheetMultilineString($spreadsheetMultilineString);
 
         foreach ($spreadsheet as $row) {
             rsort($row);
