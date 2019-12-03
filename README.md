@@ -51,6 +51,17 @@ php bin/console puzzle:run 2017 1 2 '91212129'
 http://localhost/src/Puzzle/Year2017/Day1InverseCaptcha/Part1.php
 ``` 
 
+Multiline input
+============
+Multiline input can be pasted to CLI using quotes.
+Both single quotes and double quotes work.
+
+```sh
+php bin/console puzzle:run 2017 2 1 '5 1 9 5
+7 5 3
+2 4 6 8'
+```
+
 Copyright and License
 ============
 
