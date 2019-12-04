@@ -33,7 +33,7 @@ In this example, the sum of the results would be 4 + 3 + 2 = 9.
 What is the sum of each row's result in your puzzle input?
 */
 
-namespace App\Puzzle\Year2017\Day2CorruptionChecksum;
+namespace App\Puzzle\Year2017\Day2_CorruptionChecksum;
 
 use App\Puzzle\PuzzleInterface;
 

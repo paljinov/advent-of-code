@@ -34,7 +34,7 @@ the fuel requirements for each module separately, then add them all up at the
 end.)
 */
 
-namespace App\Puzzle\Year2019\Day1TheTyrannyoftheRocketEquation;
+namespace App\Puzzle\Year2019\Day1_TheTyrannyOfTheRocketEquation;
 
 use App\Puzzle\PuzzleInterface;
 

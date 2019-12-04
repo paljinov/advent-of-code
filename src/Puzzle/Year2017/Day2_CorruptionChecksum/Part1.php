@@ -31,7 +31,7 @@ In this example, the spreadsheet's checksum would be 8 + 4 + 6 = 18.
 What is the checksum for the spreadsheet in your puzzle input?
 */
 
-namespace App\Puzzle\Year2017\Day2CorruptionChecksum;
+namespace App\Puzzle\Year2017\Day2_CorruptionChecksum;
 
 use App\Puzzle\PuzzleInterface;
 

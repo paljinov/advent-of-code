@@ -43,7 +43,7 @@ For example:
 What is the solution to your captcha?
 */
 
-namespace App\Puzzle\Year2017\Day1InverseCaptcha;
+namespace App\Puzzle\Year2017\Day1_InverseCaptcha;
 
 use App\Puzzle\PuzzleInterface;
 

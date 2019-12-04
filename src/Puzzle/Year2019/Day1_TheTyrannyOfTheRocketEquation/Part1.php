@@ -38,7 +38,7 @@ What is the sum of the fuel requirements for all of the modules on your
 spacecraft?
 */
 
-namespace App\Puzzle\Year2019\Day1TheTyrannyoftheRocketEquation;
+namespace App\Puzzle\Year2019\Day1_TheTyrannyOfTheRocketEquation;
 
 use App\Puzzle\PuzzleInterface;
 
