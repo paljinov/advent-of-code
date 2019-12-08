@@ -65,6 +65,14 @@ class Part2 implements PuzzleInterface
         $this->part1 = new Part1();
     }
 
+    /**
+     * Determines "100 * noun + verb" result, for noun and verb
+     * that cause the program to produce the output 19690720.
+     *
+     * @param string $intcode
+     * 
+     * @return integer
+     */
     public function solution($intcode)
     {
         // Parse Intcode to array, and replace positions to "1202 program alarm" state

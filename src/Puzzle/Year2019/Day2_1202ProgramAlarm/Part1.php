@@ -97,6 +97,13 @@ class Part1 implements PuzzleInterface
 
     private const SECOND_POSITION_REPLACEMENT = 2;
 
+    /**
+     * Determines value at output Intcode position 0 after the program halts.
+     *
+     * @param string $intcode
+     * 
+     * @return integer
+     */
     public function solution($intcode)
     {
         // Parse Intcode to array, and replace positions to "1202 program alarm" state
