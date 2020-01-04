@@ -101,7 +101,7 @@ class Part1 implements PuzzleInterface
      * Determines value at output Intcode position 0 after the program halts.
      *
      * @param string $intcode
-     * 
+     *
      * @return integer
      */
     public function solution($intcode)
@@ -125,7 +125,7 @@ class Part1 implements PuzzleInterface
      * Parses Intcode string to array.
      *
      * @param string $intcode
-     * 
+     *
      * @return int[]
      */
     public function parseIntcode(string $intcode): array
@@ -142,7 +142,7 @@ class Part1 implements PuzzleInterface
      * @param int[] $intcodeArray
      * @param int $first Replacement at position 1
      * @param int $second Replacement at position 2
-     * 
+     *
      * @return int[]
      */
     public function replaceFirstAndSecondPositionsWithInputs(array $intcodeArray, int $first, int $second): array
@@ -157,7 +157,7 @@ class Part1 implements PuzzleInterface
      * Get output Intcode array after applied operations.
      *
      * @param array $intcodeArray
-     * 
+     *
      * @return array
      */
     public function getOutputIntcodeArray(array $intcodeArray): array

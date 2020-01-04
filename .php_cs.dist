@@ -1,0 +1,13 @@
+<?php
+
+use PhpCsFixer\Config;
+use PhpCsFixer\Finder;
+
+$finder = Finder::create()
+    ->in('src');
+
+return Config::create()
+    ->setRules([
+        '@PSR2' => true,
+    ])
+    ->setFinder($finder);

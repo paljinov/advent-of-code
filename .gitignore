@@ -2,6 +2,10 @@
 /.idea
 /.vscode
 
+# Code static analysis and coding standards tools
+.php_cs
+.php_cs.cache
+phpstan.neon
+
 # Managed by Composer
 /vendor
-.php_cs.cache

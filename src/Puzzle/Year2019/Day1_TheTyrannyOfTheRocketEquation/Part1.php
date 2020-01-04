@@ -48,7 +48,7 @@ class Part1 implements PuzzleInterface
      * Finds the sum of the fuel requirements for all of the modules on your spacecraft.
      *
      * @param string $moduleMassesMultilineString
-     * 
+     *
      * @return int The sum of the fuel requirements for all of the modules on your spacecraft
      */
     public function solution($moduleMassesMultilineString)
@@ -70,7 +70,7 @@ class Part1 implements PuzzleInterface
      * Reads module masses multiline string and stores data to array.
      *
      * @param string $moduleMassesMultilineString
-     * 
+     *
      * @return int[]
      */
     public function parseModuleMassesMultilineString(string $moduleMassesMultilineString): array
@@ -87,7 +87,7 @@ class Part1 implements PuzzleInterface
      * Calculate fuel needed for module.
      *
      * @param integer $moduleMass
-     * 
+     *
      * @return integer
      */
     public function calculateFuelForModule(int $moduleMass): int

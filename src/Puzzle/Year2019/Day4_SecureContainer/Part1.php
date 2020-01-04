@@ -32,7 +32,7 @@ class Part1 implements PuzzleInterface
      * Determines how many different passwords within the given range meets criteria.
      *
      * @param string $range Given password range
-     * 
+     *
      * @return int Number of passwords within the given range which meet criteria
      */
     public function solution($range)
@@ -75,7 +75,7 @@ class Part1 implements PuzzleInterface
      * Parse given password range.
      *
      * @param string $range
-     * 
+     *
      * @return array
      */
     public function parsePasswordRange(string $range): array
