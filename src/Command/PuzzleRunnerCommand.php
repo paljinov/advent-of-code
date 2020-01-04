@@ -16,14 +16,14 @@ class PuzzleRunnerCommand extends Command
 
     /**
      * Command output helper.
-     * 
+     *
      * @var CommandOutputHelper $commandOutputHelper
      */
     private $commandOutputHelper;
 
     /**
      * Puzzle locator service.
-     * 
+     *
      * @var PuzzleLocatorService $puzzleLocatorService
      */
     private $puzzleLocatorService;
@@ -36,7 +36,7 @@ class PuzzleRunnerCommand extends Command
         parent::__construct();
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setDescription('Advent of code puzzle runner.')

@@ -26,6 +26,11 @@ use App\Puzzle\PuzzleInterface;
 
 class Part2 implements PuzzleInterface
 {
+    /**
+     * Part 1.
+     *
+     * @var Part1
+     */
     private $part1;
 
     public function __construct()
@@ -38,7 +43,7 @@ class Part2 implements PuzzleInterface
      * Determines how many different passwords within the given range meets criteria.
      *
      * @param string $range Given password range
-     * 
+     *
      * @return int Number of passwords within the given range which meet criteria
      */
     public function solution($range)

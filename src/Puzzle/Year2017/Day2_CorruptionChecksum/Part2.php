@@ -39,6 +39,11 @@ use App\Puzzle\PuzzleInterface;
 
 class Part2 implements PuzzleInterface
 {
+    /**
+     * Part 1.
+     *
+     * @var Part1
+     */
     private $part1;
 
     public function __construct()
@@ -51,7 +56,7 @@ class Part2 implements PuzzleInterface
      * Determines checksum for the spreadsheet.
      *
      * @param string $spreadsheetMultilineString
-     * 
+     *
      * @return integer Division sum
      */
     public function solution($spreadsheetMultilineString)

@@ -57,6 +57,11 @@ class Part2 implements PuzzleInterface
 {
     private const OUTPUT = 19690720;
 
+    /**
+     * Part 1.
+     *
+     * @var Part1
+     */
     private $part1;
 
     public function __construct()
@@ -70,7 +75,7 @@ class Part2 implements PuzzleInterface
      * that cause the program to produce the output 19690720.
      *
      * @param string $intcode
-     * 
+     *
      * @return integer
      */
     public function solution($intcode)

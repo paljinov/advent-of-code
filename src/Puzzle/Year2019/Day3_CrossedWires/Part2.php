@@ -50,6 +50,11 @@ use App\Puzzle\PuzzleInterface;
 
 class Part2 implements PuzzleInterface
 {
+    /**
+     * Part 1.
+     *
+     * @var Part1
+     */
     private $part1;
 
     public function __construct()
@@ -61,8 +66,8 @@ class Part2 implements PuzzleInterface
     /**
      * Determines fewest combined steps the wires must take to reach an intersection.
      *
-     * @param string Wires paths separated by spaces or newline
-     * 
+     * @param string $wiresPaths Wires paths separated by spaces or newline
+     *
      * @return integer Fewest combined steps the wires must take to reach an intersection
      */
     public function solution($wiresPaths)
@@ -86,7 +91,7 @@ class Part2 implements PuzzleInterface
      * @param array $intersections
      * @param array $firstWireCoordinates
      * @param array $secondWireCoordinates
-     * 
+     *
      * @return integer
      */
     private function calculateFewestCombinedStepsForBothWires(
@@ -119,8 +124,8 @@ class Part2 implements PuzzleInterface
      * Calculate fewest combined steps to intersection for wire.
      *
      * @param array $intersection
-     * @param array $wireCoordinatess
-     * 
+     * @param array $wireCoordinates
+     *
      * @return int
      */
     private function calculateFewestCombinedStepsToIntersectionForWire(array $intersection, array $wireCoordinates): int

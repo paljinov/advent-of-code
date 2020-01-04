@@ -40,6 +40,11 @@ use App\Puzzle\PuzzleInterface;
 
 class Part2 implements PuzzleInterface
 {
+    /**
+     * Part 1.
+     *
+     * @var Part1
+     */
     private $part1;
 
     public function __construct()
@@ -52,7 +57,7 @@ class Part2 implements PuzzleInterface
      * Finds the sum of the fuel requirements for all of the modules on your spacecraft.
      *
      * @param string $moduleMassesMultilineString
-     * 
+     *
      * @return int The sum of the fuel requirements for all of the modules on your spacecraft
      */
     public function solution($moduleMassesMultilineString)
@@ -75,11 +80,11 @@ class Part2 implements PuzzleInterface
                     break;
                 }
 
-                // Adding additional module fuel to module fuel 
+                // Adding additional module fuel to module fuel
                 $moduleFuel += $additionalModuleFuel;
             }
 
-            // Adding total module fuel to total spacecraft fuel 
+            // Adding total module fuel to total spacecraft fuel
             $totalFuel += $moduleFuel;
         }
 
@@ -90,7 +95,7 @@ class Part2 implements PuzzleInterface
      * Calculate additional fuel for fuel.
      *
      * @param integer $fuel
-     * 
+     *
      * @return integer
      */
     private function calculateAdditionalFuelForFuel(int $fuel): int

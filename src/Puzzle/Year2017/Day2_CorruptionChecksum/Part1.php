@@ -41,7 +41,7 @@ class Part1 implements PuzzleInterface
      * Determines checksum for the spreadsheet.
      *
      * @param string $spreadsheetMultilineString
-     * 
+     *
      * @return integer Checksum
      */
     public function solution($spreadsheetMultilineString)
@@ -70,8 +70,8 @@ class Part1 implements PuzzleInterface
      * Reads spreadsheet multiline string and stores data to array.
      *
      * @param string $spreadsheetMultilineString
-     * 
-     * @return int[]
+     *
+     * @return array
      */
     public function parseSpreadsheetMultilineString(string $spreadsheetMultilineString): array
     {

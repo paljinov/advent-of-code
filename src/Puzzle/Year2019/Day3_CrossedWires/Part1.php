@@ -64,6 +64,7 @@ intersection?
 namespace App\Puzzle\Year2019\Day3_CrossedWires;
 
 use App\Puzzle\PuzzleInterface;
+use RuntimeException;
 
 class Part1 implements PuzzleInterface
 {
@@ -76,8 +77,8 @@ class Part1 implements PuzzleInterface
     /**
      * Determines Manhattan distance from the central port to the closest intersection.
      *
-     * @param string Wires paths separated by spaces or newline
-     * 
+     * @param string $wiresPaths Wires paths separated by spaces or newline
+     *
      * @return integer Manhattan distance from the central port to the closest intersection
      */
     public function solution($wiresPaths)
@@ -99,7 +100,7 @@ class Part1 implements PuzzleInterface
      * Parses wire paths string to array.
      *
      * @param string $wiresPaths
-     * 
+     *
      * @return array
      */
     public function parseWirePaths(string $wiresPaths): array
@@ -118,7 +119,7 @@ class Part1 implements PuzzleInterface
      * Calculate all wire turning point coordinates.
      *
      * @param array $wirePath
-     * 
+     *
      * @return array [0 => ['x' => int, 'y' => int], ...]
      */
     public function calculateWireCoordinates($wirePath): array
@@ -165,6 +166,8 @@ class Part1 implements PuzzleInterface
                         'y' => $wireCoordinates[$lastWireCoordinatesKey]['y'] - $distance,
                     ];
                     break;
+                default:
+                    throw new RuntimeException(sprintf('Unsupported wire direction "%s"', $direction));
             }
 
             $wireCoordinates[$lastWireCoordinatesKey + 1] = $turnCoordinate;
@@ -178,7 +181,7 @@ class Part1 implements PuzzleInterface
      *
      * @param array $firstWireCoordinates Coordinates through which the wire passes
      * @param array $secondWireCoordinates Coordinates through which the wire passes
-     * 
+     *
      * @return array Intersections [0 => ['x' => int, 'y' => int], ...]
      */
     public function calculateAllIntersections(array $firstWireCoordinates, array $secondWireCoordinates): array
@@ -213,7 +216,7 @@ class Part1 implements PuzzleInterface
      * @param array $b ['x' => int, 'y' => int] First wire end point
      * @param array $c ['x' => int, 'y' => int] Second wire start point
      * @param array $d ['x' => int, 'y' => int] Second wire end point
-     * 
+     *
      * @return array|null ['x' => int, 'y' => int] Intersection or null if there is no intersection between lines
      */
     private function calculateIntersectionForLinesBetweenPoints(array $a, array $b, array $c, array $d): ?array
@@ -262,7 +265,7 @@ class Part1 implements PuzzleInterface
      * Calculates minimum Manhattan distance from the central port to the wires intersection.
      *
      * @param array $intersections [0 => ['x' => int, 'y' => int], ...]
-     * 
+     *
      * @return int
      */
     private function calculateMinimumManhattanDistance(array $intersections): int
