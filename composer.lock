@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3c7660781c939469d9b05f9a20ee154",
+    "content-hash": "521793da2e312421033d4db2160fdd73",
     "packages": [
         {
             "name": "psr/container",
@@ -57,16 +57,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "dae5ef273d700771168ab889d9f8a19b2d206656"
+                "reference": "fe6e3cd889ca64172d7a742a2eb058541404ef47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/dae5ef273d700771168ab889d9f8a19b2d206656",
-                "reference": "dae5ef273d700771168ab889d9f8a19b2d206656",
+                "url": "https://api.github.com/repos/symfony/console/zipball/fe6e3cd889ca64172d7a742a2eb058541404ef47",
+                "reference": "fe6e3cd889ca64172d7a742a2eb058541404ef47",
                 "shasum": ""
             },
             "require": {
@@ -129,7 +129,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-12-01T10:51:15+00:00"
+            "time": "2019-12-17T13:20:22+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -634,6 +634,58 @@
             "time": "2019-11-25T22:10:32+00:00"
         },
         {
+            "name": "nikic/php-parser",
+            "version": "v4.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/PHP-Parser.git",
+                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/9a9981c347c5c49d6dfe5cf826bb882b824080dc",
+                "reference": "9a9981c347c5c49d6dfe5cf826bb882b824080dc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "ircmaxell/php-yacc": "0.0.5",
+                "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
+            },
+            "bin": [
+                "bin/php-parse"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.3-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpParser\\": "lib/PhpParser"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov"
+                }
+            ],
+            "description": "A PHP parser written in PHP",
+            "keywords": [
+                "parser",
+                "php"
+            ],
+            "time": "2019-11-08T13:50:10+00:00"
+        },
+        {
             "name": "paragonie/random_compat",
             "version": "v9.99.99",
             "source": {
@@ -730,6 +782,46 @@
             "time": "2018-02-15T16:58:55+00:00"
         },
         {
+            "name": "phpstan/phpstan",
+            "version": "0.12.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "c15a6ea55da71d8133399306f560cfe4d30301b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/c15a6ea55da71d8133399306f560cfe4d30301b7",
+                "reference": "c15a6ea55da71d8133399306f560cfe4d30301b7",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/php-parser": "^4.3.0",
+                "php": "^7.1"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.12-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "time": "2019-12-14T13:41:17+00:00"
+        },
+        {
             "name": "psr/event-dispatcher",
             "version": "1.0.0",
             "source": {
@@ -824,7 +916,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -952,7 +1044,7 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
@@ -1002,7 +1094,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
@@ -1051,7 +1143,7 @@
         },
         {
             "name": "symfony/options-resolver",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/options-resolver.git",
@@ -1277,16 +1369,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "1568a2e8370fbc7416ef64eb5a698e4a05db5ff4"
+                "reference": "ea2dc31b59d63abd9bc2356ac72eb7b3f3469f0e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/1568a2e8370fbc7416ef64eb5a698e4a05db5ff4",
-                "reference": "1568a2e8370fbc7416ef64eb5a698e4a05db5ff4",
+                "url": "https://api.github.com/repos/symfony/process/zipball/ea2dc31b59d63abd9bc2356ac72eb7b3f3469f0e",
+                "reference": "ea2dc31b59d63abd9bc2356ac72eb7b3f3469f0e",
                 "shasum": ""
             },
             "require": {
@@ -1322,11 +1414,11 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2019-11-28T14:20:16+00:00"
+            "time": "2019-12-10T11:06:55+00:00"
         },
         {
             "name": "symfony/stopwatch",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/stopwatch.git",
@@ -1376,16 +1468,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.0.1",
+            "version": "v5.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "a4862009387721e155be6dc115061f42ee209205"
+                "reference": "d7bc61d5d335fa9b1b91e14bb16861e8ca50f53a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/a4862009387721e155be6dc115061f42ee209205",
-                "reference": "a4862009387721e155be6dc115061f42ee209205",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/d7bc61d5d335fa9b1b91e14bb16861e8ca50f53a",
+                "reference": "d7bc61d5d335fa9b1b91e14bb16861e8ca50f53a",
                 "shasum": ""
             },
             "require": {
@@ -1447,7 +1539,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-11-28T14:20:16+00:00"
+            "time": "2019-12-18T13:50:31+00:00"
         }
     ],
     "aliases": [],
