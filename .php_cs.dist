@@ -4,7 +4,10 @@ use PhpCsFixer\Config;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
-    ->in('src');
+    ->in([
+        'src',
+        'tests',
+    ]);
 
 return Config::create()
     ->setRules([

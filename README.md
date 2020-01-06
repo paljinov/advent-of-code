@@ -1,6 +1,6 @@
 # php-advent-of-code
 
-PHP solutions to **Advent of Code**: http://adventofcode.com/ tasks.  
+PHP solutions to **Advent of Code**: http://adventofcode.com/ tasks.
 
 # Introduction
 All tasks are **Advent of Code** ownership. This repository represents my solutions to **Advent of Code** algorithmic tasks.
@@ -39,12 +39,12 @@ puzzle:run <year> <day> <part> <puzzle_input>
 ```
 e.g.
 ```sh
-php bin/console puzzle:run 2017 1 2 '91212129' 
-```  
+php bin/console puzzle:run 2017 1 2 '91212129'
+```
 4. Also you can open puzzle in your favorite browser, e.g.
 ```
 http://localhost/src/Puzzle/Year2017/Day1InverseCaptcha/Part1.php
-``` 
+```
 
 # Multiline input
 Multiline input can be pasted to CLI using quotes.
@@ -56,7 +56,17 @@ php bin/console puzzle:run 2017 2 1 '5 1 9 5
 2 4 6 8'
 ```
 
+# Tests
+
+PHPUnit is used for testing puzzles also:
+- https://phpunit.de/
+- https://phpunit.readthedocs.io/
+
+Tests can be run using command:
+```sh
+./vendor/bin/phpunit tests/
+
 # Copyright and License
 
-Copyright (c) 2018 - 2019 Pave Aljinović  
+Copyright (c) 2018 - 2020 Pave Aljinović
 Licensed under the [MIT License](docs/LICENSE.md)

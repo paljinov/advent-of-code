@@ -77,11 +77,11 @@ class Part1 implements PuzzleInterface
     {
         $spreadsheet = [];
 
-        $spreadsheetMultilineString = str_replace("\t", " ", $spreadsheetMultilineString);
-        $rows = preg_split("/(\r\n|\n|\r)/", $spreadsheetMultilineString);
+        $rows = preg_split("/\n/", $spreadsheetMultilineString);
+        $rows = array_map('trim', $rows);
 
         foreach ($rows as $row) {
-            $rowData = explode(" ", $row);
+            $rowData = preg_split('/\s+/', $row);
             $spreadsheet[] = array_map('intval', $rowData);
         }
 
