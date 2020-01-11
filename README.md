@@ -1,16 +1,24 @@
 # php-advent-of-code
 
-PHP solutions to **Advent of Code**: http://adventofcode.com/ tasks.
+PHP solutions to [Advent of Code](http://adventofcode.com/) tasks.
 
-# Introduction
 All tasks are **Advent of Code** ownership. This repository represents my solutions to **Advent of Code** algorithmic tasks.
 
-# Directory structure example
-<pre>
-src/[YEAR]/Day [DAY] - Task name  # Folder for certain day
-    Part1.php           # Part1 solution
-    Part2.php           # Part2 solution
-</pre>
+# Directory structure
+
+- [Puzzles](./src/Puzzle), e.g.
+    ```
+    src/Puzzle/Year[YEAR]/Day[DAY]_TaskName
+        Part1.php           # Part1 solution
+        Part2.php           # Part2 solution
+    ```
+- [Tests](./tests/Puzzle), e.g.
+    ```
+    tests/Puzzle/Year[YEAR]/Day[DAY]_TaskName
+        Part1Test.php           # Part1 solution test
+        Part2Test.php           # Part2 solution test
+    ```
+- [Docs](./docs)
 
 # Contribution
 Feel free to fork this repository and solve something in better, i.e. more optimal way.
@@ -65,8 +73,9 @@ PHPUnit is used for testing puzzles also:
 Tests can be run using command:
 ```sh
 ./vendor/bin/phpunit tests/
+```
 
 # Copyright and License
 
 Copyright (c) 2018 - 2020 Pave Aljinović
-Licensed under the [MIT License](docs/LICENSE.md)
+Licensed under the [MIT License](./docs/LICENSE.md)
